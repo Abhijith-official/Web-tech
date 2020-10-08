@@ -1,0 +1,21 @@
+.mycss
+{
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 400px;
+    margin-right:400px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px 0 darkslategray, 0 6px 20px 0 darkslategray;
+    padding: 30px;
+}
+body
+{
+    background: url('bg1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}

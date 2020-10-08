@@ -1,0 +1,122 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Request Information</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="angular.min.js"></script>
+	<script src="countstyle.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="stylecss.css">
+
+
+	</head>
+
+	<body ng-app="requestApp">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<!-- Brand -->
+			<a class="navbar-brand" href="home.html">My Encyclopedia</a>
+		
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			  <ul class="navbar-nav">
+				<li class="nav-item">
+				  <a class="nav-link" href="#"></a>
+				</li>
+			  </ul>
+			</div>
+			<div>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="request_info.html" style="color:white;"><span class="glyphicon glyphicon-user"></span> Request Information</a></li>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<li><a href="signup.html" style="color:white;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<li><a href="index.html" style="color: white;"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+			  </ul>
+			</div>
+			<!-- <li class="nav-item">
+					  <a class="nav-link" href="#">Link</a>
+					</li>
+					<t>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">Link</a>
+					</li>
+				  </t>
+				  </ul> -->
+			</div>
+		  </nav>
+		
+        <div class="mycss">
+            <h3>Request Information</h3><br>
+        <div>
+		<div ng-controller="FormController">
+
+			<form name="form" novalidate class="css-form">
+				Name : <input type="text" ng-model="employee.name" name="empName" ng-required="true"/><br />
+    				<div ng-show="form.$submitted || form.empName.$touched">
+      					<span style="color:orange" ng-show="form.empName.$error.required">Please enter your name.</span>
+    				</div>
+
+				<br>E-mail : <input type="email" name="empEmail" ng-model="employee.email" ng-required="true"/><br />
+    				<div ng-show="form.$submitted || form.empEmail.$touched">
+      					<span style="color:orange" ng-show="form.empEmail.$error.required">Please enter an email-id.</span>
+      					<span style="color:red" ng-show="form.empEmail.$error.email">This is not a valid email.</span>
+    				</div>
+
+				<br>Role : <input type="radio" ng-model="employee.role" value="student" />  Student
+				<input type="radio" ng-model="employee.role" value="teacher" />  Teachers
+				<input type="radio" ng-model="employee.role" value="Others" />  Others<br /></br>
+				<div class="text-area" ng-controller="countController">
+					Enter the description of information required:<br>
+					      <textarea ng-model="n2" placeholder="Enter message" ng-keypress="kp2=kp2" ng-keyup="cal()"
+						maxlength="50" size="25 cols"></textarea>
+					{{n2.length}}/{{kp2}}
+			
+				
+				</div>
+				<br>
+				
+
+				<center><input type="button" ng-click="reset()" value="Reset" class="btn btn-danger"/>
+
+
+				<input type="submit" ng-disabled="form.$invalid" ng-click="save(employee)" value="Submit" class="btn btn-primary"/>
+			</center>
+			</form>
+
+  			<p>Person Details = {{employee | json}}</p>
+			  <p>Backend = {{master | json | uppercase}}</p>
+			  <center><button class="btn btn-info"><a href="confirmation.html" style="color:white;">Confirm Submission</a> </button></center>
+		</div>
+
+	<style type="text/css">
+		.css-form input.ng-invalid.ng-touched {
+			background-color: #FA787E;
+		}
+
+		.css-form input.ng-valid.ng-touched {
+			background-color: #78FA89;
+		}
+	</style>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="formapp.js"></script>
+        </div>
+</body>
+</html>

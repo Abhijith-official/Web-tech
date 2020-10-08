@@ -1,0 +1,55 @@
+<html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="angular.min.js"></script>
+    <script src="countstyle.js"></script>
+    <link rel="stylesheet" type="text/css" href="commoncss.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+
+<body ng-app="countApp" ng-controller="countController">
+    <div class="mydiv" style="text-align: center;">
+        <div>
+            <h2>Key Event Demo</h2>
+            <br>
+        </div>
+        <form name="myform" novalidate class="css-form"> <div>
+            <input type="text" ng-keypress="kp1=kp1+1" ng-model="n1" placeholder="Type string" size="25 cols">
+    </div>
+    <div>
+              <br><b>Length of string entered: {{n1.length}}</b>
+    </div>
+    <div class="text-area">
+        <br>
+              <textarea ng-model="n2" placeholder="Enter message" ng-keypress="kp2=kp2" ng-keyup="cal()"
+            ng-disabled="kp2<=0" size="25 cols"></textarea>
+        {{n2.length}}/{{kp2}}
+
+        
+    </div>
+    <div>
+              <br><textarea ng-keypress="kp2=kp2"> </textarea>
+    </div>
+    </body>
+
+    </div>
+
+        </div>
+    
+
+</form>
+</div>
+</body>
+
+</html>
