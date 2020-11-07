@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT subscriber (person+)>
+<!ELEMENT person(name,aoi,email)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT aoi (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST person pid ID #REQUIRED>
+<!ATTLIST person freq (monthly|weekly|daily|often|yearly) "often">

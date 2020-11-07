@@ -1,0 +1,32 @@
+{
+	"subscriber":{"person":[
+			{
+				"@pid":"101",
+				"@freq":"monthly",
+				"name":" Albert ",
+				"aoi":" Java Developer ",
+				"email":" albert@xyzmail.com "
+			},
+			{
+				"@pid":"102",
+				"@freq":"weekly",
+				"name":" Abhijith ",
+				"aoi":" Web Development ",
+				"email":" vsa@abcmail.com "
+			},
+			{
+				"@pid":"103",
+				"@freq":"daily",
+				"name":" James ",
+				"aoi":" Penetration Testing ",
+				"email":" james@abcmail.com "
+			},
+			{
+				"@pid":"104",
+				"@freq":"often",
+				"name":" Anonymous ",
+				"aoi":" App Development ",
+				"email":" anonyomus@xyzmail.com "
+			}
+		]}
+}

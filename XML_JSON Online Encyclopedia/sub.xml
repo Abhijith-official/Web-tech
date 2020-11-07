@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE org SYSTEM "subscribe.dtd">
+<subscriber>
+    <person pid="101" freq="monthly">
+        <name> Albert </name>
+        <aoi> Java Developer </aoi>
+        <email> albert@xyzmail.com </email>
+        
+    </person>
+    <person pid="102" freq="weekly">
+        <name> Abhijith </name>
+        <aoi> Web Development </aoi>
+        <email> vsa@abcmail.com </email>
+        
+    </person>
+    <person pid="103" freq="daily">
+        <name> James </name>
+        <aoi> Penetration Testing </aoi>
+        <email> james@abcmail.com </email>
+        
+    </person>
+    <person pid="104" freq="often">
+        <name> Anonymous </name>
+        <aoi> App Development </aoi>
+        <email> anonyomus@xyzmail.com </email>
+        
+    </person>
+</subscriber>

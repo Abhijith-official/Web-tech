@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body
+{
+    background: url('bg3.jpg');
+      /* Background image is centered vertically and horizontally at all times */
+  background-position: cover;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+
+}
+
+
+.mycss
+{
+    background-color: rgb(238, 230, 230);
+    box-shadow: 0 4px 8px 0 gainsboro, 0 6px 20px 0 gainsboro;
+    border: 2px grey solid;
+    border-radius: 25px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 10px;
+    margin-left: 400px;
+    margin-right:500px;
+    margin-top:150px;
+    /* text-align: center;
+    align-content: center;
+    align-items: center; */
+}
+
+
+
+.mydiv
+{
+    background-color: rgb(238, 230, 230);
+    box-shadow: 0 4px 8px 0 gainsboro, 0 6px 20px 0 gainsboro;
+    border: 2px grey solid;
+    border-radius: 25px;
+    padding:50px;
+    margin-left: 200px;
+    margin-right:100px;
+    margin-top:150px;
+}
+
+.mybox
+{
+    text-align: center;
+    
+
+
+}
+
+.mycss
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+        </style>
+    </head>
+<body>
+
+<div class="mycss">
+<h1></h1>
+
+<p id="name"></p>
+<p id="aoi"></p>
+<p id="email"></p>
+<p id="request"></p>
+
+</div>
+<script>
+var x="";
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("name").innerHTML = "<b>Name: </b>"+myObj.name;
+     document.getElementById("aoi").innerHTML = "<b>Email: </b>"+myObj.email;
+    // document.getElementById("email").innerHTML = myObj.email;
+     for(i in myObj.request)
+     {
+         x += i+") "+"<b>Category: </b>"+myObj.request[i].category+"<br><br>&nbsp;&nbsp;&nbsp;&nbsp;-->"+"<b>&nbsp;&nbsp;Topic: </b>"+myObj.request[i].topic+ "<br>&nbsp;&nbsp;&nbsp;&nbsp;-->"+"<b>&nbsp;&nbsp;keyword: </b>"+myObj.request[i].keyword+"<br><br>";
+
+     }
+     document.getElementById("request").innerHTML = x;
+
+  }
+};
+xmlhttp.open("GET", "sub_json.txt", true);
+xmlhttp.send();
+</script>
+</body>
+</html>

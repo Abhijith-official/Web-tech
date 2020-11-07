@@ -1,0 +1,29 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type="text/xsl" href="sub.xsl"?>
+
+<subscriber>
+    <person id="101">
+        <name> Albert </name>
+        <aoi> Java Developer </aoi>
+        <email> albert@xyzmail.com </email>
+        <frequency> Monthly </frequency>
+    </person>
+    <person id="102">
+        <name> Abhijith </name>
+        <aoi> Web Development </aoi>
+        <email> vsa@abcmail.com </email>
+        <frequency> Weekly </frequency>
+    </person>
+    <person id="103">
+        <name> James </name>
+        <aoi> Penetration Testing </aoi>
+        <email> james@abcmail.com </email>
+        <frequency> Daily </frequency>
+    </person>
+    <person id="104">
+        <name> Anonymous </name>
+        <aoi> App Development </aoi>
+        <email> anonyomus@xyzmail.com </email>
+        <frequency> Often </frequency>
+    </person>
+</subscriber>

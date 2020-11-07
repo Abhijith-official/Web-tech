@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/NewXMLSchema" 
+xmlns:tns="http://www.example.org/NewXMLSchema" 
+elementFormDefault="qualified">
+
+<element name="globalsubscriber" type="tns:subscribertype"></element>
+
+<complexType name="subscribertype">
+<sequence>
+<element name="person" type="tns:persontype" 
+maxOccurs="4" minOccurs="1"></element>
+</sequence>
+</complexType>
+
+<complexType name="persontype">
+<sequence>
+<element name="name" type="string"></element>
+<element name="aoi" type="string"></element>
+<element name="email" type="string"></element>
+</sequence>
+<attribute name="pid" type="ID" use="required"></attribute>
+<attribute name="freq" type="tns:fre"></attribute>
+</complexType>
+
+
+
+<simpleType name="fre">
+<restriction base="string">
+<pattern value="monthly"></pattern>
+<pattern value="weekly"></pattern>
+<pattern value="daily"></pattern>
+<pattern value="often"></pattern>
+<pattern value="yearly"></pattern>
+</restriction>
+</simpleType>
+
+</schema>

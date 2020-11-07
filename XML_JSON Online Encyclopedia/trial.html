@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+  var x = "";
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.name;
+    document.getElementById("demo2").innerHTML = myObj.email;
+    for(i in myObj.request){
+      x += myObj.request[i].topic + "<br>";
+    }
+
+  }
+};
+xmlhttp.open("GET", "sub_json.txt", true);
+xmlhttp.send();
+</script>

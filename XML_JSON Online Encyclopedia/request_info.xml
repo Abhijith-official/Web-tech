@@ -1,0 +1,27 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type="text/xsl" href="req.xsl"?>
+
+<request>
+    <info id="101">
+        <name> Albert </name>
+        <email> albert@xyzmail.com </email>
+        <category> Botany </category>
+        <topic> Flower </topic>
+        <keyword> convolvulus arvensis </keyword>
+    </info>
+    <info id="102">
+        <name> John </name>
+        <email> john@abcmail.com </email>
+        <category> Zoology </category>
+        <topic> Insects </topic>
+        <keyword>  Periplaneta americana </keyword>
+    </info>
+    <info id="103">
+        <name> James </name>
+        <email> james@newmail.com </email>
+        <category> Networks </category>
+        <topic> Protocols and Security </topic>
+        <keyword>  SDN Network</keyword>
+    </info>
+    
+</request>
